@@ -1,0 +1,7 @@
+.carousel .carouselSlides {
+    max-height: 250px;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
