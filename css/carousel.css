@@ -2,14 +2,19 @@
     position: relative;
     display: inline-block;
 }
-.carousel .carouselSlideControls button {
+.carousel .carouselSlideMainControls button {
     position: absolute;
     top: 50%;
 }
-.carousel .carouselSlideControls button.slidePrevious {
+.carousel .carouselSlideMainControls button.slidePrevious {
     left: 0;
 }
-.carousel .carouselSlideControls button.slideNext {
+.carousel .carouselSlideMainControls button.slideNext {
+    right: 0;
+}
+.carousel .carouselSlideRadioControls {
+    position: absolute;
+    bottom: 0;
     right: 0;
 }
 .carousel .carouselSlides {
