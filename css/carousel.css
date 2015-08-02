@@ -2,20 +2,22 @@
     position: relative;
     display: inline-block;
 }
-.carousel .carouselSlideMainControls button {
+ .carouselSlideMainControls button {
     position: absolute;
     top: 50%;
+    z-index: 1;
 }
-.carousel .carouselSlideMainControls button.slidePrevious {
+.carouselSlideMainControls button.slidePrevious {
     left: 0;
 }
-.carousel .carouselSlideMainControls button.slideNext {
+.carouselSlideMainControls button.slideNext {
     right: 0;
 }
-.carousel .carouselSlideRadioControls {
+.carouselSlideRadioControls {
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: 1;
 }
 .carousel .carouselSlides {
     max-height: 250px;
@@ -23,4 +25,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+}
+.carousel .carouselSlides img {
+    width: 100%;
 }
