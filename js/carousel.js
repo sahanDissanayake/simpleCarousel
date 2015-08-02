@@ -44,7 +44,7 @@ $(function() {
 
     var upAndDownMove = function(type) {
         var nextSlide = currentSlide;
-        console.log(currentSlide)
+
         if (type === 'next') {
             (currentSlide < $carouselSlides.length - 1) ? (nextSlide++) : (nextSlide = 0); // Move to the next slide
         } else if (type === 'previous') {
@@ -52,27 +52,31 @@ $(function() {
         }
 
         jumpToSlide(nextSlide);
-    }
+    };
 
     $carousel.on('click', '.carouselSlideMainControls button', function(e) {
+
         clearInterval(slideChangeInterval);
+
         if ( $(this).hasClass('slidePrevious') ) {
             upAndDownMove('previous');
         } else {
             upAndDownMove('next');
         }
+
         slideChangeInterval = setInterval(changeSlide, slideChangeTime);
     });
 
     $carousel.on('click', '.carouselSlideRadioControls input', function() {
         clearInterval(slideChangeInterval);
+
         jumpToSlide($(this).data('slide') - 1);
+
         slideChangeInterval = setInterval(changeSlide, slideChangeTime);
     });
 
 
 
     $carouselSlides.not(':first').hide();
-
     slideChangeInterval = setInterval(changeSlide, slideChangeTime);
 });
