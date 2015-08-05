@@ -21,7 +21,7 @@ $(function() {
             currentSlide++;
 
             // "The images should wrap around when the user gets to the end of the list"
-            (currentSlide === $carouselSlides.length) ? currentSlide = 0 : null;
+            (currentSlide === $carouselSlides.length) && (currentSlide = 0);
 
             $carouselSlides.eq(currentSlide).fadeIn(transitionSpeed);
 
