@@ -13,7 +13,7 @@ $(function() {
     // Recurring function for automatic transitions
     var changeSlide = function() {
         // Preventing the carousel from breaking if the user click the next button continuosly
-        (currentSlide > $carouselSlides.length) ? (currentSlide = 0) : null;
+        (currentSlide > $carouselSlides.length) && (currentSlide = 0);
 
         $carouselSlides.eq(currentSlide).fadeOut(transitionSpeed, function() {
 
